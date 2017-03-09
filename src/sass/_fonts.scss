@@ -1,0 +1,33 @@
+//
+// Font Embeds
+// ---------------------------
+
+// example:
+// @font-face {
+//     font-family: 'CircularStd-Black';
+//     src: url('../fonts/CircularStd-Black.eot'); // ie8 hack
+//     src: url('../fonts/CircularStd-Black.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/CircularStd-Black.woff') format('woff'),
+//          url('../fonts/CircularStd-Black.ttf') format('truetype'),
+//          url('../fonts/CircularStd-Black.svg#CircularStd-Black') format('svg');
+//     font-weight: normal !important;
+//     font-style: normal;
+// }
+ 
+
+@font-face {
+    font-family: 'ITCAvantGardeStd';
+    src: url('../fonts/ITCAvantGardeStd-Book.eot');
+    src: url('../fonts/ITCAvantGardeStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ITCAvantGardeStd';
+    src: url('../fonts/ITCAvantGardeStd-Demi.eot');
+    src: url('../fonts/ITCAvantGardeStd-Demi.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+

@@ -1,0 +1,52 @@
+<div class="container">
+    <nav class="nav-project">
+        <a class="home-link" href="/">
+            <span class="name">Remy Dragyn</span>
+            <span class="status">Front-end Developer</span>
+        </a>
+        <ul class="side-nav-project">
+            <li class="datadata side-nav-project-item">
+                <a href="/project/datadata">DD</a>
+            </li>
+            <li class="synerghetic side-nav-project-item">
+                <a href="/project/synerghetic">SH</a>
+            </li>
+            <li class="capucime side-nav-project-item">
+                <a href="/project/capucime">CP</a>
+            </li>
+            <li class="diagnaliz side-nav-project-item">
+                <a href="/project/diagnaliz">DG</a>
+            </li>
+            <li class="mediadata side-nav-project-item">
+                <a href="/project/mediadata">MD</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>{{title}}</h1>
+        </div>
+
+        <div class="col-sm-12">
+            <ul class="infos">
+                <li class="infos-item">
+                    Role: <span>{{role}}</span>
+                </li>
+                <li class="infos-item">
+                    Client: <span>{{client}}</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="col-md-8">
+            {{{content}}}
+        </div>
+
+        <div class="col-sm-12">
+            <img class="project-detail-image project-detail-image-1" src="/images/projects/{{slug}}_1.jpg" alt="{{title}} image 1">
+        </div>
+        <div class="col-sm-12">
+            <img class="project-detail-image" src="/images/projects/{{slug}}_2.jpg" alt="{{title}} image 2">
+        </div>
+    </div>
+</div>

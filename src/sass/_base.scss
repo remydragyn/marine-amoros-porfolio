@@ -1,0 +1,56 @@
+//
+// Base
+// ---------------------------
+
+@-webkit-viewport { width: device-width; }
+@-moz-viewport { width: device-width; }
+@-ms-viewport { width: device-width; }
+@-o-viewport { width: device-width; }
+@viewport { width: device-width; }
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+.page {
+    height: 100%;
+    font-size: 0;
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.region-main {
+    height: 100%;
+}
+
+.region-nav {
+    width: 20%;
+    height: 100%;
+    font-size: 1.4rem;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.region-content {
+    width: 80%;
+    height: 100%;
+    display: inline-block;
+    background-color: green;
+    vertical-align: top;
+}
+
+.title {
+    font-family: 'ITCAvantGardeStd', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $black;
+}
