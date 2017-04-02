@@ -1,0 +1,150 @@
+.index-list-container {
+    height: 100%;
+    width: 100%;
+    padding: 5rem 0 12rem;
+    // overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.index-arrow {
+    height: 74px;
+    width: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 4rem;
+    margin: auto;
+    z-index: 99;
+    cursor: pointer;
+
+    &:before, &:after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 4px;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: all 0.3s ease-out;
+    }
+
+    &.prev-arrow {
+        left: 4rem;
+
+        &:hover {
+            &:before {
+                transform: rotate(-40deg);
+            }
+            &:after {
+                transform: rotate(40deg);
+            }
+        }
+
+        &:before, &:after {
+            transform-origin: left center;
+        }
+
+        &:before {
+            transform: rotate(-45deg);
+            top: 2px;
+        }
+        &:after {
+            transform: rotate(45deg);
+            bottom: 2px;
+        }
+    }
+
+    &.next-arrow {
+        right: 4rem;
+
+        &:hover {
+            &:before {
+                transform: rotate(40deg);
+            }
+            &:after {
+                transform: rotate(-40deg);
+            }
+        }
+
+        &:before, &:after {
+            transform-origin: right center;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+            top: 2px;
+        }
+        &:after {
+            transform: rotate(-45deg);
+            bottom: 2px;
+        }
+    }
+}
+
+.index-list {
+    height: 100%;
+    width: 100%;
+    // overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.index-item {
+    height: 100%;
+    width: 100%; 
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.index-item-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.project-cover-container {
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.project-infos-container {
+    position: absolute;
+    bottom: -8rem;
+    left: -8rem;
+    line-height: 0.7;
+    z-index: 90;
+
+    .project-year {
+        font-size: 12rem;
+        font-family: 'ITCAvantGardeStd', sans-serif;
+        font-weight: 500;
+        letter-spacing: -0.05em;
+        color: $blue;
+    }
+
+    .project-name {
+        font-size: 8.6rem;
+        font-family: 'StayRad', serif;
+    }
+
+    .project-description {
+        width: 46rem;
+        font-size: 1.4rem;
+        font-family: 'ITCAvantGardeStd', sans-serif;
+        line-height: 1.4;
+        margin-top: 1rem;
+    }
+}

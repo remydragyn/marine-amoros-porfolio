@@ -1,8 +1,10 @@
 <h3 class="project-name sub-part-name">{{{title}}}</h3>
 {{#if subpart}}
-<ul class="sub-nav-list">
-    {{#each subpart}}
-    <li>{{@key}}</li>
-    {{/each}}
-</ul>
+<div class="inner-project-nav-list-container">
+    <ul class="inner-project-nav-list">
+        {{#each subpart}}
+        <li class="inner-project-nav-item" data-slug="{{@key}}">{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
 {{/if}}

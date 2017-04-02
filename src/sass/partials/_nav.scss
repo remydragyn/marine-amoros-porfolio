@@ -1,6 +1,8 @@
 .nav-wrapper {
-    padding: 7rem 2rem 0;
-    background-color: red;
+    text-align: left;
+    padding: 5rem 0 0;
+    // padding: 7rem 2rem 0;
+    display: inline-block;
     box-sizing: border-box;
 }
 
@@ -28,7 +30,23 @@
 .sub-part-name {
     font-size: 1.2rem;
     font-family: 'ITCAvantGardeStd', sans-serif;
-    font-weight: 500;
+    // font-weight: 500;
     color: $grey;
     margin-bottom: 1.5rem;
+}
+
+.inner-project-nav-list-container {
+    height: 0;
+    overflow: hidden;
+}
+
+.inner-project-nav-list {
+    font-size: 1.1rem;
+    font-family: 'ITCAvantGardeStd', sans-serif;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+}
+
+.inner-project-nav-item {
+    margin-bottom: 1rem;
 }

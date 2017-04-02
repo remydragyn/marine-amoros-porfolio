@@ -5,7 +5,8 @@ var template      = require('templates/index.hbs');
 
 
 // VIEW
-var NavView     = require('views/NavView'); 
+var NavView       = require('views/NavView'); 
+var ContentView   = require('views/ContentView'); 
 // var ProjectsListView  = require('views/ProjectsListView');
 
 module.exports = Marionette.LayoutView.extend({
@@ -28,6 +29,11 @@ module.exports = Marionette.LayoutView.extend({
     onShow: function () {
         this.navView = new NavView();
         this.regionNav.show(this.navView);
+
+        this.contentView = new ContentView({
+            collection: app.workCollection,
+        });
+        this.regionContent.show(this.contentView);
     }
 
 });
