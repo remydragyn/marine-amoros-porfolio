@@ -1,0 +1,9 @@
+h1 {
+    &.main-title {
+        color: blueviolet; 
+    }
+
+    &:hover {
+        color: blue;
+    }
+}
