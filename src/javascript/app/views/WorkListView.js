@@ -11,18 +11,33 @@ module.exports = Marionette.CollectionView.extend({
 
     childEvents: function () {return {}},
 
+    ui: {
+        subNavItem: '.sub-nav-item-js',
+    },
+
     events: {},
 
-    initialize: function () {},
+    initialize: function () {
+        channels.navChannel.on('clickIndexArrow', this.clickIndexArrow, this);
+    },
 
-    onBeforeRender: function () {},
+    onShow: function () {
+        // binds view elements to ui hash
+        this.bindUIElements();
 
-    onRender: function () {},
+        this.ui.subNavItem.first().addClass('hover');
+    },
 
-    onShow: function () {},
+    clickIndexArrow: function (options) {
+        var $el = this.$el,
+            index = options.index,
+            $subNavItem = $el.children('.sub-nav-item-js');
 
-    onBeforeDestroy: function () {},
+        $subNavItem.removeClass('hover');
 
-    onDestroy: function () {},
+        $($subNavItem[index]).addClass('hover');
+    }
+
+    
 
 });

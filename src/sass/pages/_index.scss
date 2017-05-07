@@ -101,11 +101,16 @@
     top: 0;
     left: 0;
 
-    display: none;
+    &.index-item-js {
+        opacity: 0;
+        z-index: 10;
 
-    &.active {
-        display: block;
+        &.active {
+            z-index: 90;
+            display: block;
+        }
     }
+
 }
 
 .index-item-content {

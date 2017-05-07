@@ -5,6 +5,7 @@ var channels           = require('channels');
 var GlobalView         = require('views/GlobalView');
 var BaseView           = require('views/BaseView');
 var IndexView          = require('views/IndexView');
+var ProjectView          = require('views/ProjectView');
 
 var WorkCollection = require('collections/WorkCollection');
 var workModel       = require('models/WorkModel'); 
@@ -54,8 +55,11 @@ module.exports = Backbone.Marionette.Controller.extend({
     index: function () {
         var indexView = new IndexView();
         app.regionMain.show(indexView);
+    },
 
-        channels.loaderChannel.trigger('hideLoader');
+    project: function () {
+        var projectView = new ProjectView();
+        app.regionMain.show(projectView);
     },
 
     defaultHandler: function (route) {

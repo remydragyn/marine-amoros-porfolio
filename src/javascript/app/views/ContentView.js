@@ -24,7 +24,9 @@ module.exports = Marionette.CompositeView.extend({
     },
 
 
-    initialize: function () {},
+    initialize: function () {
+        channels.navChannel.on('hoverSubItemNav', this.hoverSubItemNav, this);
+    },
 
     onBeforeRender: function () {},
 
@@ -34,8 +36,7 @@ module.exports = Marionette.CompositeView.extend({
     onShow: function () {
         // binds view elements to ui hash
         this.bindUIElements();
-
-        this.ui.indexItem.first().addClass('active');
+        this.ui.indexItem.first().addClass('active').css('opacity', 1);
     },
 
     onClickIndexArrow: function (e) {
@@ -63,6 +64,19 @@ module.exports = Marionette.CompositeView.extend({
 
         }
 
+        channels.navChannel.trigger('clickIndexArrow', {
+            index: newIndex
+        });
+
+        this.moveIndexItem(direction, newIndex, $items, $list);
+    },
+
+    hoverSubItemNav: function (options) {
+        var $list = this.ui.indexList,
+            $items = $list.children(),
+            newIndex = options.index,
+            direction = 'next';
+        
         this.moveIndexItem(direction, newIndex, $items, $list);
     },
 
@@ -72,10 +86,11 @@ module.exports = Marionette.CompositeView.extend({
 
         var tl = new TimelineMax();
 
-        console.log(newItem);
+        tl.totalProgress(1, false);
 
-        tl.to($currentItem, 0.4, {alpha:0, display:'none', className: '-=active'})
-          .fromTo(newItem, 0.4, {alpha: 0, display:'none', className: '+=active'}, {alpha:1, display:'block'})
+        tl.to($items, 0.2, {alpha:0, display:'none', className: '-=active'})
+          .fromTo(newItem, 0.2, {alpha: 0, display:'none', className: '+=active'}, {alpha:1, display:'block'})
+        
     }
 
 });
