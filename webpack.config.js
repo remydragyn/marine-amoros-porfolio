@@ -2,7 +2,7 @@ const path = require('path'),
       webpack = require('webpack'),
       ExtractTextPlugin = require('extract-text-webpack-plugin'),
       extractCss = new ExtractTextPlugin({
-          filename: '../css/[name].css',
+          filename: 'css/[name].css',
           allChunks: true,
           disable: !process.env.NODE_ENV === 'production' ? false : true
       });
@@ -12,12 +12,12 @@ module.exports = {
         app: ['./src/js/global.js', './src/scss/global.scss']
     },
     output: {
-        path: path.resolve(__dirname, './build/js'),
-        filename: '[name].js',
-        publicPath: '/build/js/'
+        path: path.resolve(__dirname, './build'),
+        filename: 'js/[name].js',
+        publicPath: '/build/'
     },
 
-    // devtool: process.env.NODE_ENV === 'production' ? 'eval' : 'nosources-source-map',
+    devtool: 'source-map',
 
     module: {
         rules: [
@@ -35,8 +35,18 @@ module.exports = {
                 test: /\.scss$/,
                 exclude: /(node_modules|bower_components)/,
                 use: extractCss.extract({
+                    use: [{
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },{
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }],
                     fallback: 'style-loader',
-                    use: ['raw-loader', 'sass-loader']
                 })
             },
             {
@@ -46,6 +56,17 @@ module.exports = {
                     fallback: 'style-loader',
                     use: ['css-loader']
                 })
+            }, 
+            {
+                test: /\.(png|jpg|gif|svg|woff2?|eot|ttf)$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 50,
+                        name: 'images/[name]-[hash:4].[ext]'
+                    }
+                }
             }
         ]
     },
