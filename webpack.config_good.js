@@ -33,27 +33,14 @@ module.exports = {
                 test: /\.scss$/,
                 exclude: /(node_modules|bower_components)/,
                 use: extractCss.extract({
-                    use: [{
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    },{
-                        loader: 'sass-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    }],
+                    use: ['css-loader', 'sass-loader'],
                     fallback: 'style-loader',
                 })
-            },
+            }, 
             {
                 test: /\.css$/,
                 exclude: /(node_modules|bower_components)/,
-                use: extractCss.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader']
-                })
+                use: ['style-loader','css-loader']
             }, 
             {
                 test: /\.(png|jpg|gif|svg|woff2?|eot|ttf)$/,
