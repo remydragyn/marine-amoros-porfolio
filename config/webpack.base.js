@@ -16,12 +16,12 @@ module.exports = {
         rules: [
             {
                 test: /\.scss$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: /(node_modules|bower_components|vendor)/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.js$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: /(node_modules|bower_components|vendor)/,
                 use: {
                     loader: 'babel-loader',
                     options: {
@@ -31,7 +31,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif|svg|woff2?|eot|ttf)$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: /(node_modules|bower_components|vendor)/,
                 use: {
                     loader: 'url-loader',
                     options: {
@@ -43,7 +43,7 @@ module.exports = {
             {
                 enforce: 'pre',
                 test: /\.js$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: /(node_modules|bower_components|vendor)/,
                 use: {
                     loader:'eslint-loader',
                     options: {
