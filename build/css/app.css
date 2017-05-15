@@ -1,5 +1,7 @@
 body {
-  background-color: red; }
+  background-color: red;
+  color: blue;
+  background-image: url(/build/images/Aurelie_Remy-a6ae.jpg); }
 
 a {
   color: #000;
@@ -9,4 +11,4 @@ h1.main-title {
   color: blueviolet; }
 
 h1:hover {
-  color: blue; }
+  color: green; }
