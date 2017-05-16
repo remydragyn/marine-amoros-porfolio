@@ -1,4 +1,17 @@
 {
+    "description": "Starter avec router et twig",
+    "name": "StarterKit_2017",
+    "authors": [
+        {
+            "name": "Remy Dragyn",
+            "email": "remy.dragyn@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "php_config"
+        }
+    },
     "require": {
         "twig/twig": "~1.33.2"
     }
