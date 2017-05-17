@@ -1,5 +1,8 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-        <h1>Index {{ name }}</h1>
+        <h1>Index remy {{ name }}</h1>
+
+        <p></p>
+        <a href="{{ getPath(router, 'projet', {'id': '33'}) }}">Projet 33</a>
 {% endblock body %}

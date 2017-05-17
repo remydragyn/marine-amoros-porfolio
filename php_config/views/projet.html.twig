@@ -3,5 +3,5 @@
 {% block body %}
         <h1>Projet {{ name }}</h1>
 
-        <p>{{ router.url('index') }}</p>
+        <a href="{{ getPath(router, 'index') }}">Index</a>
 {% endblock body %}

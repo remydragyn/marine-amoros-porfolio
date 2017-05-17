@@ -4,9 +4,50 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b97ef055bf84896cb8722f82e3320fd2",
-    "content-hash": "4fab61da7613b93886523e9de9142bb6",
+    "hash": "efc085a3ff309b3f5d9e85841699bac7",
+    "content-hash": "2f91984d1df2a47056a4d38faeb59227",
     "packages": [
+        {
+            "name": "fullpipe/twig-webpack-extension",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fullpipe/twig-webpack-extension.git",
+                "reference": "62751b8b6a0aed72b4ecfa005bd0aeaf96218681"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fullpipe/twig-webpack-extension/zipball/62751b8b6a0aed72b4ecfa005bd0aeaf96218681",
+                "reference": "62751b8b6a0aed72b4ecfa005bd0aeaf96218681",
+                "shasum": ""
+            },
+            "require": {
+                "twig/twig": "^1.20 || ^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fullpipe\\TwigWebpackExtension\\": "src/Fullpipe/TwigWebpackExtension/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eugene Bravov",
+                    "email": "eugene.bravov@gmail.com"
+                }
+            ],
+            "description": "Inject your webpack entry points into twig templates with easy.",
+            "keywords": [
+                "extension",
+                "twig",
+                "webpack"
+            ],
+            "time": "2017-04-20 09:53:55"
+        },
         {
             "name": "twig/twig",
             "version": "v1.33.2",

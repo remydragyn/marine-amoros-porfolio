@@ -13,6 +13,7 @@
         }
     },
     "require": {
-        "twig/twig": "~1.33.2"
+        "twig/twig": "~1.33.2",
+        "fullpipe/twig-webpack-extension": "^2.0"
     }
 }

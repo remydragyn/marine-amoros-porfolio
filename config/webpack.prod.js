@@ -1,20 +1,22 @@
-const config = require('./webpack.base'),
-      webpack = require('webpack'),
-      ExtractTextPlugin = require('extract-text-webpack-plugin'),
-      extractCss = new ExtractTextPlugin({
+const config = require('./webpack.base')
+const webpack = require('webpack')
+const ManifestPlugin = require('webpack-manifest-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const extractCss = new ExtractTextPlugin({
         filename: 'css/[name].css',
         allChunks: true,
-      });
+      })
 
 config.plugins = config.plugins.concat([
+    new ManifestPlugin(),
     extractCss,
     new webpack.optimize.UglifyJsPlugin({
         comments: false
     })
 ])
 
-const cssLoaders = config.module.rules[0].use,
-      exportLoaders = cssLoaders.slice(1, cssLoaders.length);
+const cssLoaders = config.module.rules[0].use
+const exportLoaders = cssLoaders.slice(1, cssLoaders.length)
 
 config.module.rules[0].use = null
 config.module.rules[0].use = extractCss.extract({
@@ -22,6 +24,12 @@ config.module.rules[0].use = extractCss.extract({
     fallback: 'style-loader'
 })
 
-console.log('\n\n', exportLoaders, '\n\n');
+const twigLoader = {
+        test: /\.twig$/,
+        exclude: /(node_modules|bower_components|vendor)/,
+        use: ['twig-loader']
+    }
+
+config.module.rules.push(twigLoader)
 
 module.exports = config;
