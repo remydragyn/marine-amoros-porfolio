@@ -1,8 +1,8 @@
-const webpack = require('webpack'),
-      config = require('./webpack.prod.js'),
-      shell = require('shelljs'),
-      ora = require('ora'),
-      spinner = ora('bulding…');
+const webpack = require('webpack')
+const config = require('./webpack.prod.js')
+const shell = require('shelljs')
+const ora = require('ora')
+const spinner = ora('bulding…')
 
 spinner.start()
 shell.rm('-rf', 'build/public')

@@ -1,7 +1,11 @@
 const webpack = require('webpack')
 const config = require('./webpack.dev.js')
+const shell = require('shelljs')
 const port = 8080
 const webpackDevServer = require('webpack-dev-server')
+
+shell.rm('-rf', 'build/public/css')
+
 
 config.entry.app.unshift('webpack-dev-server/client?http://localhost:'+port+'/', 'webpack/hot/dev-server')
 
