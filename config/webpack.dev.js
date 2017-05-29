@@ -1,5 +1,5 @@
-const config = require('./webpack.base'),
-      webpack = require('webpack');
+const config = require('./webpack.base')
+const webpack = require('webpack')
 
 config.plugins = config.plugins.concat([
     new webpack.HotModuleReplacementPlugin()

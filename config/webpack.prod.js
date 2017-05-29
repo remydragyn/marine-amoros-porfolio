@@ -24,12 +24,4 @@ config.module.rules[0].use = extractCss.extract({
     fallback: 'style-loader'
 })
 
-const twigLoader = {
-        test: /\.twig$/,
-        exclude: /(node_modules|bower_components|vendor)/,
-        use: ['twig-loader']
-    }
-
-config.module.rules.push(twigLoader)
-
 module.exports = config;
