@@ -13,7 +13,7 @@ const server = new webpackDevServer(webpack(config), {
             changeOrigin: true
         }
     },
-    contentBase: './',
+    contentBase: './build/',
     quiet: false,
     noInfo: false,
     publicPath: config.output.publicPath,

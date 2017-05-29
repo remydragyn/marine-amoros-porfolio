@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    {% webpack_entry_css 'app' %}
 </head>
 <body>
     {% block body %}
@@ -12,7 +14,7 @@
     {% endblock body %}
 
     {% block javascript %}
-        <script src="/build/js/app.js"></script>
+        {% webpack_entry_js 'app' %}
     {% endblock javascript %}
 </body>
 </html>

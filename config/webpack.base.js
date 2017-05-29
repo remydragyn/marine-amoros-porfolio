@@ -7,9 +7,9 @@ module.exports = {
         app: ['./src/js/global.js', './src/scss/global.scss']
     },
     output: {
-        path: path.resolve(__dirname, '../build'),
+        path: path.resolve(__dirname, '../build/public'),
         filename: 'js/[name].js',
-        publicPath: '/build/'
+        publicPath: '/public/'
     },
 
     module: {

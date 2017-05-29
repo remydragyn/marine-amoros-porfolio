@@ -5,7 +5,7 @@ const webpack = require('webpack'),
       spinner = ora('bulding…');
 
 spinner.start()
-shell.rm('-rf', 'build')
+shell.rm('-rf', 'build/public')
 
 webpack(config, function(err, stats){
     spinner.stop()
