@@ -8,7 +8,8 @@
   "scripts": {
     "postinstall": "composer install && npm run build",
     "build": "node config/build.js",
-    "dev": "node config/dev.js"
+    "dev": "node config/dev.js",
+    "clean": "node config/clean.js"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
