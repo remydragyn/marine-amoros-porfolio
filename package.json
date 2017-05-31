@@ -6,6 +6,7 @@
   "author": "Remy Dragyn",
   "license": "ISC",
   "scripts": {
+    "postinstall": "composer install && npm run build",
     "build": "node config/build.js",
     "dev": "node config/dev.js"
   },
