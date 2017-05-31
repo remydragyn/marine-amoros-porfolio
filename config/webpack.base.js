@@ -41,6 +41,17 @@ module.exports = {
                 }
             },
             {
+                test: /\.(woff2?|eot|ttf)$/,
+                exclude: /(node_modules|bower_components|vendor)/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 50,
+                        name: 'fonts/[name].[ext]'
+                    }
+                }
+            },
+            {
                 enforce: 'pre',
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components|vendor)/,

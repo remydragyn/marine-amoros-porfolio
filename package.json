@@ -41,5 +41,13 @@
   },
   "dependencies": {
     "gsap": "^1.19.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remydragyn/start-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/remydragyn/start-kit/issues"
+  },
+  "homepage": "https://github.com/remydragyn/start-kit#readme"
 }
