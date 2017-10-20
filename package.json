@@ -6,7 +6,7 @@
   "author": "Remy Dragyn",
   "license": "ISC",
   "scripts": {
-    "postinstall": "composer install && npm run build",
+    "postinstall": "php composer.phar install && npm run build",
     "build": "node config/build.js",
     "dev": "node config/dev.js",
     "clean": "node config/clean.js"
@@ -27,6 +27,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
+    "html-loader": "^0.5.1",
     "node-sass": "^4.5.2",
     "ora": "^1.2.0",
     "raw-loader": "^0.5.1",

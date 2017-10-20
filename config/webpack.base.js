@@ -30,13 +30,13 @@ module.exports = {
                 }
             },
             {
-                test: /\.(png|jpg|gif|svg|woff2?|eot|ttf)$/,
+                test: /\.(png|jpg|gif|svg)$/,
                 exclude: /(node_modules|bower_components|vendor)/,
                 use: {
-                    loader: 'url-loader',
+                    loader: 'file-loader',
                     options: {
                         limit: 50,
-                        name: 'images/[name]-[hash:4].[ext]'
+                        name: '../assets/images/[name]-[hash:4].[ext]'
                     }
                 }
             },
@@ -44,10 +44,10 @@ module.exports = {
                 test: /\.(woff2?|eot|ttf)$/,
                 exclude: /(node_modules|bower_components|vendor)/,
                 use: {
-                    loader: 'url-loader',
+                    loader: 'file-loader',
                     options: {
                         limit: 50,
-                        name: 'fonts/[name].[ext]'
+                        name: '../assets/fonts/[name].[ext]'
                     }
                 }
             },

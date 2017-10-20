@@ -1,0 +1,96 @@
+.menu-wrapper {
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    background-color: gray;
+    display: inline-block;
+    padding-top: 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    vertical-align: middle;
+}
+
+.menu-container {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.name {
+    font-size: 18px;
+}
+
+.nav-list { 
+    margin-top: 60px;
+    
+    .nav-item {
+        margin-bottom: 55px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.part-title {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.sub-nav-item {
+
+    &.hover {
+        .sub-part-name {
+            color: $black;
+
+            &:before {
+                width: 6px;
+                margin-right: 3px;
+            }
+        }
+    }
+
+    &.active {
+        .inner-project-nav-list-container {
+            max-height: 100px;
+        }
+    }
+}
+
+.sub-part-name {
+    font-size: 12px;
+    font-family: 'ITCAvantGardeStd', sans-serif;
+    color: $grey;
+    margin-bottom: 15px;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    display: inline-block;
+
+    &:before {
+        content: '';
+        height: 1px;
+        width: 0;
+        display: inline-block;
+        vertical-align: middle;
+        background-color: $black;
+        margin-right: 0;
+        transition: all 0.2s ease-out;
+    }
+}
+
+.inner-project-nav-list-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.inner-project-nav-list {
+    font-size: 11px;
+    font-family: 'ITCAvantGardeStd', sans-serif;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.inner-project-nav-item {
+    margin-bottom: 10px;
+}

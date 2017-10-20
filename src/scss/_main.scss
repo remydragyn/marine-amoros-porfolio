@@ -1,4 +1,23 @@
+html {
+    height: 100%;
+}
+
 body {
-    background-color: goldenrod;
-    // background-image: url('../images/Aurelie_Remy.jpg');
+    height: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    font-size: 0;
+    overflow: hidden;
+    border: 7px solid $black;
+    box-sizing: border-box;
+}
+
+.title {
+    font-family: 'ITCAvantGardeStd', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $black;
 }
