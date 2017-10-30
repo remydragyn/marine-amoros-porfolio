@@ -6,6 +6,15 @@
             <li class="nav-item">
                 <h2 class="part-title title">Work</h2>
                 <div class="sub-nav-list-container work-list-js">
+                    <ul>
+                    {% spaceless %}
+                    {% for slug, project in  projects %}
+                        <li class="sub-nav-item sub-nav-item-js">
+                            <h3 class="project-name sub-part-name sub-part-name-js">{{ project.title|raw }}</h3>
+                        </li>
+                    {% endfor %}
+                    {% endspaceless %}
+                    </ul>
                 </div>
             </li>
             <li class="nav-item">

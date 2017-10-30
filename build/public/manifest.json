@@ -1,10 +1,5 @@
 {
-  "../assets/fonts/ITCAvantGardeStd-Book.eot?": "../assets/fonts/ITCAvantGardeStd-Book.eot",
-  "../assets/fonts/ITCAvantGardeStd-Book.woff": "../assets/fonts/ITCAvantGardeStd-Book.woff",
-  "../assets/fonts/ITCAvantGardeStd-Demi.eot?": "../assets/fonts/ITCAvantGardeStd-Demi.eot",
-  "../assets/fonts/ITCAvantGardeStd-Demi.woff": "../assets/fonts/ITCAvantGardeStd-Demi.woff",
-  "../assets/fonts/StayRad.eot?": "../assets/fonts/StayRad.eot",
-  "../assets/fonts/StayRad.woff": "../assets/fonts/StayRad.woff",
-  "app.css": "css/app.css",
+  "env": "ENV_DEV",
+  "app.css": "",
   "app.js": "js/app.js"
 }

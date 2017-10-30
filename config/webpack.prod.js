@@ -8,7 +8,11 @@ const extractCss = new ExtractTextPlugin({
       })
 
 config.plugins = config.plugins.concat([
-    new ManifestPlugin(),
+    new ManifestPlugin({
+        seed: {
+            env: 'ENV_PROD'
+        }
+    }),
     extractCss,
     new webpack.optimize.UglifyJsPlugin({
         comments: false

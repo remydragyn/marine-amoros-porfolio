@@ -41,7 +41,8 @@
     "webpack-manifest-plugin": "^1.1.0"
   },
   "dependencies": {
-    "gsap": "^1.19.1"
+    "gsap": "^1.19.1",
+    "zepto-webpack": "^1.2.1"
   },
   "repository": {
     "type": "git",

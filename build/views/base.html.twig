@@ -14,7 +14,10 @@
     <meta property="og:image" content="http://example.com/image.jpg">
     <meta property="og:description" content="Description Here">
     
-    {% webpack_entry_css 'app' %}
+
+    {% if env == 'ENV_PROD' %}
+        {% webpack_entry_css 'app' %}
+    {% endif %}
 
 </head>
 <body>

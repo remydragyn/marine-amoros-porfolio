@@ -1,5 +1,140 @@
 .index-projects-container {
+    height: 100%;
     width: 75%;
+    padding: 50px 0 120px;
     vertical-align: middle; 
     display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.index-arrow {
+    height: 74px;
+    width: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+    margin: auto;
+    z-index: 99;
+    cursor: pointer;
+
+    &:before, &:after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 4px;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: all 0.3s ease-out;
+    }
+
+    &.prev-arrow {
+        left: 40px;
+
+        &:hover {
+            &:before {
+                transform: rotate(-40deg);
+            }
+            &:after {
+                transform: rotate(40deg);
+            }
+        }
+
+        &:before, &:after {
+            transform-origin: left center;
+        }
+
+        &:before {
+            transform: rotate(-45deg);
+            top: 2px;
+        }
+        &:after {
+            transform: rotate(45deg);
+            bottom: 2px;
+        }
+    }
+
+    &.next-arrow {
+        right: 40px;
+
+        &:hover {
+            &:before {
+                transform: rotate(40deg);
+            }
+            &:after {
+                transform: rotate(-40deg);
+            }
+        }
+
+        &:before, &:after {
+            transform-origin: right center;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+            top: 2px;
+        }
+        &:after {
+            transform: rotate(-45deg);
+            bottom: 2px;
+        }
+    }
+}
+
+.projects-list {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.project-item {
+    height: 100%;
+    width: 100%;
+}
+
+.index-item-content {
+    height: 100%;
+    width: 100%;
+}
+
+.project-cover-container {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.project-infos-container {
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    line-height: 0.7;
+    z-index: 90;
+
+    .project-year {
+        font-size: 120px;
+        font-family: 'ITCAvantGardeStd', sans-serif;
+        font-weight: 500;
+        letter-spacing: -0.05em;
+        color: $blue;
+    }
+
+    .project-name {
+        font-size: 86px;
+        font-family: 'StayRad', serif;
+    }
+
+    .project-description {
+        width: 460px;
+        font-size: 14px;
+        font-family: 'ITCAvantGardeStd', sans-serif;
+        line-height: 1.4;
+        margin-top: 10px;
+    }
 }
