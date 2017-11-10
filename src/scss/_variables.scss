@@ -6,6 +6,10 @@
 // -------------------------
 $baseUrl: env_or_default("STATIC_URL", "/static/");
 
+// Fonts
+$primaryFont: 'ITCAvantGardeStd', sans-serif;
+$secondaryFont: 'GFSDidot', serif;
+
 // Colors
 // -------------------------
 $white:                     #fff !default;

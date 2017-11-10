@@ -17,6 +17,26 @@
         "year": 2016,
         "cover": "/assets/images/projects/edie-watson/cover.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "subpart": false
+    },
+    "san-marina": {
+        "title": "San Marina",
+        "slug": "san-marina",
+        "year": 2016,
+        "cover": "/assets/images/projects/edie-watson/cover.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "subpart": {
+          "web-design": "Webdesign",
+          "print": "Print",
+          "da-photo": "DA photo"
+        }
+    },
+    "benedicte-sachi-saillard": {
+        "title": "Bénédicte Sachi-Saillard",
+        "slug": "benedicte-sachi-saillard",
+        "year": 2016,
+        "cover": "/assets/images/projects/edie-watson/cover.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
         "subpart": {
           "web-design": "Webdesign",
           "print": "Print",

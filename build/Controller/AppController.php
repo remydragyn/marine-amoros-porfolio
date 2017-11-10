@@ -36,19 +36,12 @@ class AppController {
 
         echo $this->twig->render('index.html.twig', $this->output);
     }
-
-    public function projets($router)
-    {
-        $this->output['router'] = $router;
-
-        echo $this->twig->render('projets.html.twig', $this->output);
-    }
     
-    public function projet($router, $id)
+    public function projet($router, $slug)
     {
         $this->output['router'] = $router;
 
-        $this->output['id'] = $id;
+        $this->output['slug'] = $slug;
         
         echo $this->twig->render('projet.html.twig', $this->output);
     }

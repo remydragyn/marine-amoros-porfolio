@@ -51,6 +51,10 @@
     }
 
     &.active {
+        .sub-part-name {
+            font-weight: bold;
+        }
+        
         .inner-project-nav-list-container {
             max-height: 100px;
         }
@@ -59,7 +63,7 @@
 
 .sub-part-name {
     font-size: 12px;
-    font-family: 'ITCAvantGardeStd', sans-serif;
+    font-family: $primaryFont;
     color: $grey;
     margin-bottom: 15px;
     transition: all 0.2s ease-out;
@@ -76,6 +80,11 @@
         margin-right: 0;
         transition: all 0.2s ease-out;
     }
+
+    a {
+        text-decoration: none;
+        color: $black;
+    }
 }
 
 .inner-project-nav-list-container {
@@ -86,7 +95,7 @@
 
 .inner-project-nav-list {
     font-size: 11px;
-    font-family: 'ITCAvantGardeStd', sans-serif;
+    font-family: $primaryFont;
     margin-bottom: 15px;
     padding-left: 10px;
 }

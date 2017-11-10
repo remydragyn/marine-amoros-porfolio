@@ -47,7 +47,7 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         limit: 50,
-                        name: '../assets/fonts/[name].[ext]'
+                        name: '../assets/fonts/[name]-[hash:4].[ext]'
                     }
                 }
             },

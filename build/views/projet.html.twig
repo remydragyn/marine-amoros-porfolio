@@ -1,7 +1,32 @@
 {% extends "base.html.twig" %}
 
-{% block body %}
-        <h1>Projet {{ name }}</h1>
+{% block dataPage %}project{% endblock dataPage %}
 
-        <a href="{{ getPath(router, 'index') }}">Index</a>
-{% endblock body %}
+{% block content %}
+
+{% set project = projects[slug] %}
+    <div class="index-projects-container projects-container">
+        <span class="prev-arrow index-arrow index-arrow-js" data-direction="prev"></span>
+        <span class="next-arrow index-arrow index-arrow-js" data-direction="next"></span>
+        <ul class="projects-list projects-list-js">
+            <li class="project-item project-item-js">
+                <div class="project-item-content">
+
+                    {% for subpart in  project.subparts %}
+                    <div class="project-cover-container" style="background-image: url('{{ subpart.cover }}');"> 
+
+                    </div> 
+                    {% endfor %}
+                    <div class="project-infos-container">
+                        <span class="project-year">{{ project.year }}</span>
+                        <h3 class="project-name">{{ project.title|raw }}</h3>
+                        <div class="projcet-description-container">
+                            <p class="project-description">{{ project.description|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+{% endblock content %}

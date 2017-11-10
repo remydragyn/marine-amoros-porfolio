@@ -16,7 +16,7 @@ body {
 }
 
 .title {
-    font-family: 'ITCAvantGardeStd', sans-serif;
+    font-family: $primaryFont;
     font-weight: 500;
     text-transform: uppercase;
     color: $black;

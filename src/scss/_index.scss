@@ -1,8 +1,12 @@
+body {
+    background-image: url('/assets/images/projects/edie-watson/cover.jpg');
+}
+
 .index-projects-container {
     height: 100%;
     width: 75%;
     padding: 50px 0 120px;
-    vertical-align: middle; 
+    vertical-align: middle;
     display: inline-block;
     box-sizing: border-box;
     position: relative;
@@ -95,12 +99,36 @@
 .project-item {
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: all 0.2s ease-out;
+
+    &.project-item-js {
+
+        &.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &.active {
+            opacity: 1;
+            z-index: 90;
+            display: block;
+            pointer-events: all;
+        }
+    }
+
 }
 
-.index-item-content {
+.project-item-content {
     height: 100%;
     width: 100%;
+    color: $black;
 }
+
 
 .project-cover-container {
     height: 100%;
@@ -123,17 +151,19 @@
         font-weight: 500;
         letter-spacing: -0.05em;
         color: $blue;
+        background-image: './images/Aurelie_Remy.jpg';
     }
 
     .project-name {
-        font-size: 86px;
-        font-family: 'StayRad', serif;
+        font-size: 70px;
+        font-family: $secondaryFont;
+
     }
 
     .project-description {
         width: 460px;
         font-size: 14px;
-        font-family: 'ITCAvantGardeStd', sans-serif;
+        font-family: $primaryFont;
         line-height: 1.4;
         margin-top: 10px;
     }

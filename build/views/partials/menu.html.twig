@@ -5,22 +5,34 @@
         <ul class="nav-list nav-list-js">
             <li class="nav-item">
                 <h2 class="part-title title">Work</h2>
-                <div class="sub-nav-list-container work-list-js">
-                    <ul>
+                <ul class="sub-nav-list sub-nav-work-list-js">
+
                     {% spaceless %}
-                    {% for slug, project in  projects %}
-                        <li class="sub-nav-item sub-nav-item-js">
-                            <h3 class="project-name sub-part-name sub-part-name-js">{{ project.title|raw }}</h3>
+                    {% for project in  projects %}
+                        <li class="sub-nav-item sub-nav-work-item-js {% if slug == project.slug %}active{% endif %}">
+                            <h3 class="project-name sub-part-name sub-part-name-js">
+                                <a href="{{ getPath(router, 'projet', {slug: project.slug}) }}">{{ project.title|raw }}</a>
+                            </h3>
+
+                            {% if project.subpart %}
+                            <div class="inner-project-nav-list-container">
+                                <ul class="inner-project-nav-list">
+                                    {% for subslug, subpart in  project.subpart %}
+                                    <li class="inner-project-nav-item" data-slug="{{ subslug }}">{{ subpart }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endif %}
                         </li>
                     {% endfor %}
                     {% endspaceless %}
-                    </ul>
-                </div>
+
+                </ul>
             </li>
             <li class="nav-item">
                 <h2 class="part-title title">About</h2>
-                <div class="sub-nav-list-container about-list-js">
-                </div>
+                <ul class="sub-nav-list about-list-js">
+                </ul>
             </li>
         </ul>
     </div>
